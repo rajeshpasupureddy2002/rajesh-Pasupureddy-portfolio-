@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio - P.Rajesh</title>
+  <meta name="description" content="A personal portfolio showcasing projects, skills, and experience." />
+  <style>
+
+    :root{
+      --bg: #0b1020;
+      --card: #141a32;
+      --muted: #a6b0d8;
+      --text: #e9eaf8;
+      --accent: #6c8cff;
+      --accent-2: #22d3ee;
+      --shadow: 0 10px 25px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;z-index:50;background:rgba(10,12,28,.92);backdrop-filter: blur(6px); border-bottom:1px solid rgba(255,255,255,.08)}
+    .container{width:90%;max-width:1100px;margin:0 auto}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .brand{font-weight:700;letter-spacing:.5px}
+    .nav-links{display:flex;gap:16px;flex-wrap:wrap}
+    .nav-links a{padding:8px 12px;border-radius:8px;background:transparent;border:1px solid transparent;color:var(--muted)}
+    .nav-links a.active{background: rgba(108,140,255,.25); color:#fff;border-color: rgba(108,140,255,.6)}
+    .hero{padding:48px 0 32px; text-align:left}
+    .intro{font-size:14px;color:var(--muted); text-transform:uppercase; letter-spacing:.2em}
+    .name{font-size: clamp(28px, 5vw, 56px); margin:6px 0 8px; line-height:1.05}
+    .title{font-size: clamp(18px, 2.5vw, 28px); color:#d5d8f8}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+    .btn.primary{background: linear-gradient(135deg, #6c8cff 0%, #4cc9f0 100%); color:white; box-shadow:0 6px 16px rgba(108,140,255,.5)}
+    .btn.secondary{background: transparent; color:#dbe4ff; border:1px solid rgba(220,225,255,.3)}
+    .grid{display:grid;grid-template-columns:1fr;gap:28px;margin-top:20px}
+    .card{background: rgba(20,26,50,.85); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:20px; box-shadow:var(--shadow)}
+    h2{margin:0 0 8px;font-size:22px}
+    p{color:#cbd7ff;margin:0 0 8px}
+    .section{padding:40px 0}
+    .skills{display:flex;flex-wrap:wrap;gap:12px}
+    .chip{padding:8px 12px;border-radius:999px;background:#1b2140;border:1px solid rgba(255,255,255,.08);font-size:14px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .project{border-radius:12px;overflow:hidden; background:#0e1330;border:1px solid rgba(255,255,255,.08)}
+    .project img{width:100%;height:140px;object-fit:cover; display:block; background:#1a1f3a}
+    .project-content{padding:12px}
+    .meta{font-size:12px;color:var(--muted); display:flex;gap:8px; align-items:center; margin-top:6px}
+    .contact form{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+    .contact input,.contact textarea{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background: rgba(255,255,255,.04);color:#fff}
+    .contact textarea{min-height:120px; resize:vertical}
+    footer{text-align:center;padding:24px 0;margin-top:20px;color:var(--muted);font-size:13px}
+    @media (min-width: 700px){
+      .grid{grid-template-columns:1.1fr 0.9fr}
+      .contact form{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav aria-label="Main">
+      <div class="brand">
+        <a href="https://drive.google.com/file/d/1O3VV-4Q-5kmJhY3KxvOdhTcpBq7TpFCl/view?usp=sharing" target="_blank">Click upon to Download Resume!</a>
+      </div>
+      <div class="nav-links" role="navigation">
+        <a href="#about" class="active">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience & Internships</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="intro">Hi, I'm</div>
+      <div class="name">Pasupureddy Rajesh</div>
+      <div class="title">Full Stack Developer Java • Software Dev Enthusiast • Lifelong Learner • Data Analyst</div>
+      <div class="cta">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Summary -->
+  <section class="section" id="about" aria-label="About me">
+    <div class="container grid">
+      <article class="card" style="min-height:180px">
+        <h2>About Me</h2>
+        <p>Passionate about building accessible, responsive data handling experiences and Software Development. I enjoy turning ideas into polished products with clean code and thoughtful design.</p>
+        <p>Core strengths: <strong>Java Programming</strong>, <strong>Spring Boot and other Frameworks</strong>, <strong>Full Stack Dev Java/Python</strong>, <strong>problem solving, </strong><strong>collaboration & Communications</strong>.</p>
+        <div class="meta" aria-label="Location and availability" style="margin-top:8px">
+          <span>📍 Visakhapatnam, Andhra Pradesh, India</span>
+          <span>•</span>
+          <span>Available for Remote/Hybrid/On-site</span>
+        </div>
+      </article>
+
+      <aside class="card" aria-label="Highlights">
+        <h2>Highlights</h2>
+        <ul style="margin:0;padding-left:1em">
+          <li>Built 20+ responsive components and interactive Dashboards.</li>
+          <li>OSI Gen AI Certified and Aquring Data by Nasscom</li>
+          <li>Contributed to open-source projects</li>
+          <li>Google Gen AI Workshop by Visakhapatnam</li>
+          <li>Career Enhancement through Entrepreneurship by Pulsus Group</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects" aria-label="Projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <p style="color:var(--muted);margin-top:0 0 12px">A selection of recent work. Click for details (replace placeholders with your content).</p>
+      <div class="projects" aria-label="Project grid">
+        <!-- Project 1 -->
+        <article class="project">
+          <img src="Project1.png" height="1024" width="1024"/>
+          <div class="project-content">
+            <strong>Little Hope Rescue 24/7</strong>
+            <p style="margin:6px 0;color:#cbd7ff;font-size:14px">It is volunteering-based emergency assistance system designed to help people facing vehicle breakdowns and
+              fuel shortages, especially during nighttime. The system connects users with nearby volunteers who can provide
+              immediate assistance.</p>
+            <div class="meta">
+              <span>Java & SpringBoot</span><span>•</span><span>Html/Css</span><span>•</span><span>RestAPIs</span>
+            </div>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="project">
+          <img src="emotional Assessment.png" alt="Project cover image" />
+          <div class="project-content">
+            <strong>Emotional Assessment: A Guide to Mock Interviews</strong>
+            <p style="margin:6px 0;color:#cbd7ff;font-size:14px">The Project assess the candidate’s emotional status through our mock interviewing platform. It is mock platform to get selected in real time interview experience and application has set of basic HR related question to assess the candidates Communication skills, capability etc.</p>
+            <div class="meta">
+              <span>Html/Css/JS</span><span>•</span><span>Python</span><span>•</span><span>Flask API</span>
+            </div>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="project">
+          <img src="The Project involves.png" alt="Project cover image" />
+          <div class="project-content">
+            <strong>Cricket Players Performance and Consistency Analysis</strong>
+            <p style="margin:6px 0;color:#cbd7ff;font-size:14px">The Project involves in data analysis using Tableau and Power BI to create visualization dashboards illustrating cricket players performance trends, enabling coaches to identify strengths and weaknesses. </p>
+            <div class="meta">
+              <span>Power BI</span><span>•</span><span>Tableau</span><span>.</span><span>Data Analysis</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills" aria-label="Skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <p style="color:var(--muted);margin-top:0">A snapshot of my capabilities and tools I enjoy using.</p>
+      <div class="skills" aria-label="Skills list">
+        <span class="chip">HTML/CSS/JavaScript</span>
+        <span class="chip">Java Programming</span>
+        <span class="chip">Spring/SpringBoot</span>
+        <span class="chip">React</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">MySQL/SQL Lite</span>
+        <span class="chip">MangoDB</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">PowerBI & Tableau</span>
+        <span class="chip">Python Programming</span>
+        <span class="chip">Accessibility & Problem Solving</span>
+        <span class="chip">Git & Version Control</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience" aria-label="Experience">
+    <div class="container grid">
+      <article class="card" style="min-height:180px">
+        <h2>Experience & Internships</h2>
+        <strong>Java Developer Intern</strong> — Demy Software Solutions, Visakhapatnam (05/2023 - 07/2023)
+        <p style="color:var(--muted);margin:6px 0 0">Acquired real time experience how the industry works actually through the Coding in the domain of Java
+          Programming. Being intern I have gained specific knowledge in OOPs, Collection Frameworks and Data Structures and Algorithms.</p>
+        <strong>Programming Intern</strong> — PixelWind Technologies (06/2024 - 11/2024)
+        <p style="color:var(--muted);margin:6px 0 0">Learned and obtained valuable insights from the organization and acquired real time experience from the
+          mentors for work process. Majorly worked on Tableau, Business Intelligence (Power BI) and other Data Visualization techniques in Python i.e. Matplotlib, Sea born and plotting techniques to get the valuable insights and DAX.</p>
+
+      </article>
+      <aside class="card" aria-label="Education & Training">
+        <h2>Education</h2>
+        <div>
+          <strong>B.Tech in Computer Science(Data Science)</strong><br/>
+          NS Raju Institute of Technology, Visakhapatnam, 2021-2025 CGPA/Percentage : 8.69/79%
+          <br>
+          <strong>BIEAP - 12th</strong>
+          <br/>
+          V.D.A Jr College
+          Visakhapatnam, 2019 - 2021
+          Percentage: 83.3%
+          <br>
+          <strong>SSCAP - 10th</strong> <br>
+          New Era EM School, Visakhapatnam, 2019, CGPA: 83.3%
+
+        </div>
+    </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact" aria-label="Contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p style="color:var(--muted);margin-top:0 0 8px">Interested in working together? Send me a message.</p>
+      <div class="contact">
+        <form action="#" method="post" onsubmit="return false;">
+          <div>
+            <label for="name" class="sr-only" style="display:none">Name</label>
+            <input id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div>
+            <label for="email" class="sr-only" style="display:none">Email</label>
+            <input id="email" name="email" type="email" placeholder="Email" required />
+          </div>
+          <div style="grid-column:1 / -1">
+            <label for="subject" class="sr-only" style="display:none">Subject</label>
+            <input id="subject" name="subject" placeholder="Subject" />
+          </div>
+          <div style="grid-column:1 / -1">
+            <label for="message" class="sr-only" style="display:none">Message</label>
+            <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+          </div>
+          <div style="grid-column:1 / -1">
+            <button class="btn primary" type="submit">Send Message</button>
+            <button class="btn secondary" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer aria-label="Footer">
+  <div class="container">
+    © Rajesh Pasupureddy • rajeshpasupureddy2002@gmail.com • www.linkedin.com/in/pasupureddy-rajesh/ • github.com/rajeshpasupureddy2002 • leetcode.com/u/rajeshpasupureddy2002/
+  </div>
+</footer>
+</body>
+</html>
